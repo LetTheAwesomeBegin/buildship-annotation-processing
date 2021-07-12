@@ -28,9 +28,16 @@ subprojects {
     }
 
     eclipse {
-        classpath {
-            file.beforeMerged { cp ->
-                cp.entries.add( new org.gradle.plugins.ide.eclipse.model.SourceFolder('.apt_generated', null) )
+        // classpath {
+        //     file.beforeMerged { cp ->
+        //         // cp.entries.add( new org.gradle.plugins.ide.eclipse.model.SourceFolder('.apt_generated', null) )
+        //         cp.entries.add( new org.gradle.plugins.ide.eclipse.model.SourceFolder('bin/.apt_generated/main', null) )
+        //     }
+        // }
+        jdt {
+            apt {
+                genSrcDir = file('bin/.apt_generated/main')
+                genTestSrcDir = file('bin/.apt_generated/test')
             }
         }
     }

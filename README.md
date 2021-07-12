@@ -41,5 +41,10 @@ subprojects {
     }
 }
 ```
+Then run
+
+```
+gradlew eclipseJdtApt eclipseFactorypath eclipseJdt
+```
 
 In Eclipse, I imported the project as a Gradle project.  In VSCode, I open the folder into a new window.
