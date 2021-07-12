@@ -1,0 +1,5 @@
+rootProject.name = 'buildship-annotation-processing'
+
+include 'api'
+include 'core'
+include 'project'
